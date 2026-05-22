@@ -127,7 +127,7 @@ export default function YouTube() {
   variants={fadeUp}
 >
   <Link
-    href="https://youtube.com/@yourchannel"
+    href="https://youtube.com/@KaveenX"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface border border-border font-mono text-sm text-purple transition-all duration-300 group hover:border-red-500/50 hover:text-red-500 hover:bg-red-500/5"

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { div } from "framer-motion/client";
 
 const navLinks = [
   { label: "About", href: "#about" },
