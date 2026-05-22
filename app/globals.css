@@ -1,0 +1,297 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #e8e8f0;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   PREMIUM BACKGROUND
+========================================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0.03;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* Ambient gradient glow */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59, 130, 246, 0.08),
+      transparent 30%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a3e;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* =========================================
+   TEXT UTILITIES
+========================================= */
+
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+.text-glow {
+  text-shadow:
+    0 0 25px rgba(139, 92, 246, 0.35),
+    0 0 50px rgba(59, 130, 246, 0.15);
+}
+
+/* =========================================
+   GLASSMORPHISM
+========================================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-dark {
+  background: rgba(10, 10, 15, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* =========================================
+   GLOW SHADOWS
+========================================= */
+
+.glow-purple {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.10);
+}
+
+.glow-card {
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.12),
+    0 0 60px rgba(59, 130, 246, 0.06);
+}
+
+/* =========================================
+   PREMIUM BUTTON
+========================================= */
+
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #3b82f6
+  );
+
+  color: white;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.35),
+    0 0 60px rgba(59, 130, 246, 0.2);
+}
+
+.btn-premium::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.btn-premium:hover::before {
+  transform: translateX(100%);
+}
+
+/* =========================================
+   LAYOUT HELPERS
+========================================= */
+
+.section-padding {
+  padding-inline: 1.5rem;
+  padding-block: 7rem;
+}
+
+.container-premium {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: #e8e8f0;
+}
+
+/* =========================================
+   IMAGE OPTIMIZATION
+========================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   GLOBAL TRANSITIONS
+========================================= */
+
+a,
+button {
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
