@@ -141,11 +141,10 @@ export default function Navbar() {
       </a>
 
       <nav
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "backdrop-blur-md bg-bg/80 border-b border-border"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
+          ? "backdrop-blur-md bg-bg/80 border-b border-border"
+          : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
@@ -166,12 +165,11 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleHashClick(e, link.href)}
-                className={`text-sm font-medium transition-colors ${
-                  activeHash === link.href
-                    ? "text-purple"
-                    : "text-text-dim hover:text-text"
-                }`}
-                aria-current={activeHash === link.href ? "section" : undefined}
+                className={`text-sm font-medium transition-colors ${activeHash === link.href
+                  ? "text-purple"
+                  : "text-text-dim hover:text-text"
+                  }`}
+                aria-current={activeHash === link.href ? "location" : undefined}   // ✅ fixed
               >
                 {link.label}
               </Link>
@@ -197,9 +195,8 @@ export default function Navbar() {
         {/* Mobile drawer */}
         <div
           ref={menuRef}
-          className={`md:hidden fixed top-16 left-0 right-0 bg-bg/95 backdrop-blur-md border-b border-border transition-transform duration-300 ease-in-out ${
-            mobileOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`md:hidden fixed top-16 left-0 right-0 bg-bg/95 backdrop-blur-md border-b border-border transition-transform duration-300 ease-in-out ${mobileOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
           style={{ zIndex: 40 }}
         >
           <div className="px-6 py-4 flex flex-col gap-4">
@@ -208,12 +205,11 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleHashClick(e, link.href)}
-                className={`text-lg transition ${
-                  activeHash === link.href
+                className={`text-lg transition ${activeHash === link.href
                     ? "text-purple font-medium"
                     : "text-text-dim hover:text-text"
-                }`}
-                aria-current={activeHash === link.href ? "section" : undefined}
+                  }`}
+                aria-current={activeHash === link.href ? "location" : undefined}   // ✅ fixed
               >
                 {link.label}
               </Link>
