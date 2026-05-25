@@ -3,6 +3,7 @@ import img1 from '@/images/img1.png'
 import pr1 from '@/images/pr1.png'
 import pr2 from '@/images/pr2.png'
 import pr3 from '@/images/pr3.png'
+import pr4 from '@/images/pr4.png'
 export interface Product {
   id: number;
   category: "templates" | "components" | "courses";
@@ -50,17 +51,17 @@ export const products: Product[] = [
     image: pr2,
     gradient: "from-purple/20 to-purple-dim/10",
   },
-  // {
-  //   id: 4,
-  //   category: "components",
-  //   title: "Animation Pack",
-  //   desc: "Framer Motion animation presets for Next.js. Page transitions, scroll reveals, hover effects.",
-  //   tags: ["Framer Motion", "React"],
-  //   price: "$19",
-  //   gumroad: "#",
-  //   image: img1,
-  //   gradient: "from-blue/20 to-blue/5",
-  // },
+  {
+    id: 4,
+    category: "templates",
+    title: "Modern SaaS Landing Page Template",
+    desc: "Premium glassmorphism landing page built with Next.js 14, TypeScript & Tailwind CSS. Ship your SaaS in hours, not weeks.",
+    tags: ["Framer Motion", "Next Js", "Tailwind"],
+    price: "$39",
+    gumroad: "https://kaveenhansith.gumroad.com/l/kfgfxt",
+    image: pr4,
+    gradient: "from-blue/20 to-blue/5",
+  },
   // {
   //   id: 5,
   //   category: "courses",

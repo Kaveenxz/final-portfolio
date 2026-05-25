@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import type { Project } from "@/lib/data/projects";
 
 const cardVariants = {
@@ -88,14 +88,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           >
             Live demo <ExternalLink size={12} />
           </Link>
-          <Link
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-mono text-xs text-muted hover:text-purple transition"
-          >
-            GitHub <Github size={12} />
-          </Link>
+          
         </div>
       </div>
     </motion.div>
