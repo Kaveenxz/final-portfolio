@@ -4,6 +4,8 @@ import pr1 from '@/images/pr1.png'
 import pr2 from '@/images/pr2.png'
 import pr3 from '@/images/pr3.png'
 import pr4 from '@/images/pr4.png'
+import pr5 from '@/images/pr5.png'
+
 export interface Product {
   id: number;
   category: "templates" | "components" | "courses";
@@ -60,6 +62,17 @@ export const products: Product[] = [
     price: "$39",
     gumroad: "https://kaveenhansith.gumroad.com/l/kfgfxt",
     image: pr4,
+    gradient: "from-blue/20 to-blue/5",
+  },
+  {
+    id: 5,
+    category: "templates",
+    title: "Modern Link in BIO Page Template",
+    desc: "Premium Link in Bio page template built with pure HTML and Tailwind CSS. One file. No frameworks, no npm, no build tools.",
+    tags: [ "HTML", "Tailwind"],
+    price: "$19",
+    gumroad: "https://kaveenhansith.gumroad.com/l/qirvd",
+    image: pr5,
     gradient: "from-blue/20 to-blue/5",
   },
   // {

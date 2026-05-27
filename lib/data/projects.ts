@@ -1,6 +1,7 @@
 // lib/data/projects.ts
 import pr1 from '@/images/pr1.png'
 import pr4 from '@/images/pr4.png'
+import pr5 from '@/images/pr5.png'
 export interface Project {
   id: string;
   featured?: boolean;
@@ -20,7 +21,7 @@ export const projects: Project[] = [
     desc: "Production-ready landing page template for SaaS products. Hero, features, pricing, testimonials — all pixel perfect.",
     tags: ["Next.js", "Tailwind", "Framer Motion", "TypeScript"],
     demo: "https://food-cort-amber.vercel.app/",
-    image: pr1,
+    image: pr4,
     gradient: "from-purple/20 to-blue/10",
   },
   {
@@ -29,18 +30,17 @@ export const projects: Project[] = [
     desc: "Speculative redesign of a local restaurant. Modern dark UI, online menu, mobile-first.",
     tags: ["Next.js", "Tailwind", "Responsive", "TypeScript", "Dark mode", "Framer Motion"], 
     demo: "https://saas-appx.vercel.app/",
-    image: pr4,
+    image: pr1,
     gradient: "from-blue/20 to-purple/10",
   },
-  // {
-  //   id: "03",
-  //   title: "Tailwind Component Library",
-  //   desc: "50+ reusable components — cards, navbars, modals, forms. Dark mode included.",
-  //   tags: ["Tailwind", "React", "Dark mode"],
-  //   demo: "#",
-  //   github: "#",
-  //   image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format",
-  //   gradient: "from-purple/20 to-purple-dim/10",
-  // },
+  {
+    id: "03",
+    title: "Lynk — Premium Link in Bio Page Template",
+    desc: "A beautiful, fully custom Link in Bio page. No Linktree. No monthly fees. Just yours — forever.",
+    tags: ["Tailwind", "HTML", "Dark mode"],
+    demo: "https://lynkxz.vercel.app/",
+    image: pr5,
+    gradient: "from-purple/20 to-purple-dim/10",
+  },
  
 ];
