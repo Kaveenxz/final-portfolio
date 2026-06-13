@@ -2,6 +2,7 @@
 import pr1 from '@/images/pr1.png'
 import pr4 from '@/images/pr4.png'
 import pr5 from '@/images/pr5.png'
+import pr6 from '@/images/pr6.png'
 export interface Project {
   id: string;
   featured?: boolean;
@@ -20,7 +21,7 @@ export const projects: Project[] = [
     title: "SaaS Landing Page Kit",
     desc: "Production-ready landing page template for SaaS products. Hero, features, pricing, testimonials — all pixel perfect.",
     tags: ["Next.js", "Tailwind", "Framer Motion", "TypeScript"],
-    demo: "https://food-cort-amber.vercel.app/",
+    demo: "https://saas-appx.vercel.app/",
     image: pr4,
     gradient: "from-purple/20 to-blue/10",
   },
@@ -29,7 +30,7 @@ export const projects: Project[] = [
     title: "Restaurant Website Redesign",
     desc: "Speculative redesign of a local restaurant. Modern dark UI, online menu, mobile-first.",
     tags: ["Next.js", "Tailwind", "Responsive", "TypeScript", "Dark mode", "Framer Motion"], 
-    demo: "https://saas-appx.vercel.app/",
+    demo: "https://food-cort-amber.vercel.app/",
     image: pr1,
     gradient: "from-blue/20 to-purple/10",
   },
@@ -41,6 +42,15 @@ export const projects: Project[] = [
     demo: "https://lynkxz.vercel.app/",
     image: pr5,
     gradient: "from-purple/20 to-purple-dim/10",
+  },
+  {
+    id: "04",
+    title: "Apex Fitness — Premium Fitness Coaching Platform",
+    desc: "A modern fitness coaching platform designed to convert visitors into members.",
+    tags: ["Next.js", "Tailwind CSS", "Fitness", "Dark Mode"],
+    demo: "https://appex-fitness.vercel.app/",
+    image: pr6,
+    gradient: "from-orange/20 to-red/10",
   },
  
 ];
