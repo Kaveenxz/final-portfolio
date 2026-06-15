@@ -5,6 +5,8 @@ import pr2 from '@/images/pr2.png'
 import pr3 from '@/images/pr3.png'
 import pr4 from '@/images/pr4.png'
 import pr5 from '@/images/pr5.png'
+import pr6 from '@/images/pr6.png'
+import pr7 from '@/images/pr7.png'
 
 export interface Product {
   id: number;
@@ -74,6 +76,28 @@ export const products: Product[] = [
     gumroad: "https://kaveenhansith.gumroad.com/l/qirvd",
     image: pr5,
     gradient: "from-blue/20 to-blue/5",
+  },
+  {
+    id: 6,
+    category: "templates",
+    title: "Premium Fitness Website Template",
+    desc: "High-converting fitness website template built for gyms, personal trainers, fitness coaches, and wellness brands. Includes programs, schedules, trainers, pricing, testimonials, and blog sections.",
+    tags: ["Next.js", "Tailwind"],
+    price: "$69",
+    gumroad: "https://kaveenhansith.gumroad.com/l/mkxdvy",
+    image: pr6,
+    gradient: "from-red/20 to-red/5",
+  },
+  {
+    id: 7,
+    category: "templates",
+    title: "Healthcare Website Template",
+    desc: "Professional healthcare website template for clinics, doctors, dentists, and medical practices. Includes appointment booking, service pages, doctor profiles, testimonials, and modern conversion-focused layouts.",
+    tags: ["Next.js", "Tailwind"],
+    price: "$49",
+    gumroad: "https://kaveenhansith.gumroad.com/l/sfjcfx",
+    image: pr7,
+    gradient: "from-teal/20 to-cyan/5",
   },
   // {
   //   id: 5,

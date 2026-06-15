@@ -3,6 +3,7 @@ import pr1 from '@/images/pr1.png'
 import pr4 from '@/images/pr4.png'
 import pr5 from '@/images/pr5.png'
 import pr6 from '@/images/pr6.png'
+import pr7 from '@/images/pr7.png'
 export interface Project {
   id: string;
   featured?: boolean;
@@ -51,6 +52,15 @@ export const projects: Project[] = [
     demo: "https://appex-fitness.vercel.app/",
     image: pr6,
     gradient: "from-orange/20 to-red/10",
+  },
+  {
+    id: "05",
+    title: "Meridian Health — Healthcare Website Template",
+    desc: "A modern healthcare website template designed for clinics, doctors, dentists, and medical professionals.",
+    tags: ["Next.js", "Tailwind CSS", "Healthcare", "Responsive"],
+    demo: "https://health-carex.vercel.app/",
+    image: pr7,
+    gradient: "from-teal/20 to-blue/10",
   },
  
 ];
