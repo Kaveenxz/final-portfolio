@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Play, Youtube, Clock, Eye } from "lucide-react";
-import thumbnail1 from '@/images/maxresdefault.jpg'
-import thumbnail2 from '@/images/maxresdefault (1).jpg'
-import thumbnail3 from '@/images/maxresdefault (2).jpg'
+import thumbnail1 from '@/images/thm1.png'
+import thumbnail2 from '@/images/thm2.png'
+import thumbnail3 from '@/images/thm3.png'
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
